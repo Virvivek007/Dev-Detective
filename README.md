@@ -22,3 +22,7 @@ Drag the folder into Netlify Drop, or import the repo in Vercel (static site, no
 
 Tech
 HTML, CSS, vanilla JavaScript (native `fetch`, async/await, Promise.all).
+# Link
+GitHub Repo: <https://github.com/Virvivek007/Dev-Detective>
+Live Deployment: <https://dev-detective-rl8c.vercel.app/>
+Video Walkthrough: <https://drive.google.com/file/d/1TeeY2p6S9b6GUtG4-pt5gcOSyl7q15or/view>
