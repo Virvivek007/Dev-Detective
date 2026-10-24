@@ -1,0 +1,224 @@
+/* ---------- Variables & reset ---------- */
+:root {
+  --bg: #0f1720;
+  --card-bg: #17222e;
+  --border: #2a3a4a;
+  --text: #e8eef4;
+  --text-muted: #93a4b5;
+  --primary: #f2b134;
+  --success: #2ea44f;
+  --danger: #d1463f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  color: var(--primary);
+}
+
+.header p {
+  margin: 4px 0 16px;
+  color: var(--text-muted);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: #1a1405;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn-outline.active {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ---------- Search form ---------- */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.search-form input {
+  flex: 1 1 200px;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.search-form input[hidden] {
+  display: none;
+}
+
+/* ---------- Loading & error ---------- */
+#status {
+  min-height: 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  margin: 12px auto;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-box {
+  padding: 16px;
+  border: 1px solid var(--danger);
+  border-radius: 10px;
+  background-color: rgba(209, 70, 63, 0.1);
+  color: #ffb4af;
+}
+
+/* ---------- Profile card ---------- */
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.card-grid.battle {
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--card-bg);
+}
+
+.card.winner {
+  border: 2px solid var(--success);
+}
+
+.card.loser {
+  border: 2px solid var(--danger);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.winner .badge {
+  background-color: var(--success);
+}
+
+.loser .badge {
+  background-color: var(--danger);
+}
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.profile img {
+  width: 96px;
+  height: 96px;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+}
+
+.profile h2 {
+  margin: 0;
+}
+
+.profile a,
+.repo-list a {
+  color: var(--primary);
+}
+
+.small-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.total-stars {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ---------- Repository list ---------- */
+.repo-list {
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.repo-list li {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.repo-list .small-text {
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .card-grid.battle {
+    grid-template-columns: 1fr;
+  }
+}

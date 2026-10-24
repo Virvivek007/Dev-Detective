@@ -1,0 +1,3 @@
+GitHub Repo: <paste your public repo URL>
+Live Deployment: <paste your Vercel/Netlify URL>
+Video Walkthrough: <paste your video URL>

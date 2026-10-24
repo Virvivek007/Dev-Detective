@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev-Detective | GitHub Profile Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+
+    <header class="header">
+      <h1>Dev-Detective</h1>
+      <p>Search a GitHub user, or compare two of them.</p>
+      <button type="button" id="modeToggle" class="btn btn-outline">Battle Mode: Off</button>
+    </header>
+
+    <form id="searchForm" class="search-form" autocomplete="off">
+      <input type="text" id="usernameOne" placeholder="Enter GitHub username (e.g. octocat)" required>
+      <input type="text" id="usernameTwo" placeholder="Enter second username" hidden>
+      <button type="submit" id="searchBtn" class="btn">Search</button>
+    </form>
+
+    <div id="status" aria-live="polite"></div>
+    <div id="results"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
